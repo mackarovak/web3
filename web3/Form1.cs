@@ -16,6 +16,7 @@ namespace web3
         public Form1()
         {
             InitializeComponent();
+            tabControl1.ContextMenuStrip = contextMenuStrip1;
             historyBox.Text = File.ReadAllText("history.txt");
             bookmarks.Items.AddRange(File.ReadAllLines("bookmarks.txt"));
         }
@@ -161,5 +162,23 @@ namespace web3
             catch { }
         }
 
+        private void Form1_Load(object sender, EventArgs e) 
+        {
+            WebBrowser browser = new WebBrowser();
+            browser.Visible = true;
+            browser.ScriptErrorsSuppressed = true;
+            browser.Dock = DockStyle.Fill;
+            browser.DocumentCompleted += Browser_DocumentCompleted;
+
+            tabControl1.TabPages.Add("Новая вкладка");
+            tabControl1.SelectTab(tabCounter);
+            tabControl1.SelectedTab.Controls.Add(browser);
+            tabCounter++;
+        }
+
+        private void сохранитьНаДискеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowSaveAsDialog();
+        }
     }
 }

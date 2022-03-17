@@ -51,8 +51,11 @@ namespace web3
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.deleteHistoryMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.сохранитьНаДискеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // webBrowser1
@@ -250,6 +253,21 @@ namespace web3
             this.deleteHistoryMenu.Name = "deleteHistoryMenu";
             this.deleteHistoryMenu.Size = new System.Drawing.Size(61, 4);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.сохранитьНаДискеToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 69);
+            // 
+            // сохранитьНаДискеToolStripMenuItem
+            // 
+            this.сохранитьНаДискеToolStripMenuItem.Name = "сохранитьНаДискеToolStripMenuItem";
+            this.сохранитьНаДискеToolStripMenuItem.Size = new System.Drawing.Size(245, 32);
+            this.сохранитьНаДискеToolStripMenuItem.Text = "Сохранить на диске";
+            this.сохранитьНаДискеToolStripMenuItem.Click += new System.EventHandler(this.сохранитьНаДискеToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -263,6 +281,7 @@ namespace web3
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +309,8 @@ namespace web3
         private System.Windows.Forms.ToolStripMenuItem закладкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem историяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьИзЗакладокToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьНаДискеToolStripMenuItem;
     }
 }
 
